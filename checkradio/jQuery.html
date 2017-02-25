@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>自定义checkbox， radio样式</title>
+<style type="text/css">
+	body{
+		background-color: #fff;
+	}
+	.demo{
+		width: 600px;
+		margin: 0 auto;
+	}
+	.checkbox{
+		width: 14px;
+		height: 14px;
+		background-image: url(images/99322cf8c3283e42.png);
+		cursor: pointer;
+		background-position: 75px 67px;
+		margin: 5px;
+	}
+	.checkboxActive{
+		background-position: 40px 68px;
+	}
+	.radio{
+		width: 16px;
+		height: 16px;
+		background-image: url(images/99322cf8c3283e42.png);
+		cursor: pointer;
+		background-position: 76px 90px;
+		margin: 5px;
+	}
+	.radioActive{
+		background-position: 41px 90px;
+	}
+</style>
+</head>
+<body>
+<div class="demo">
+	<div class="checkbox"></div>
+	<div class="radio"></div>
+	<p>上面的是自定义checkbox， radio样式↑↑↑↑↑↑↑</p>
+	<p>下面的是默认的checkbox、radio↓↓↓↓↓↓↓</p>
+	<input type="checkbox" name=""><br>
+	<input type="radio" name="">
+</div>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	clickCheckbox();
+	clickRadio();
+	function clickCheckbox(){
+		var isChecked = false;
+		var _checkbox = $('.checkbox');
+		_checkbox.on('click', function(){
+			if(isChecked == false){
+				_checkbox.addClass('checkboxActive');
+				isChecked = true;
+			}else{
+				_checkbox.removeClass('checkboxActive');
+				isChecked = false;
+			}
+		});
+	};
+	
+	function clickRadio(){
+		var isChecked = false;
+		var _radio = $('.radio');
+		_radio.on('click', function(){
+			if(isChecked == false){
+				_radio.addClass('radioActive');
+				isChecked = true;
+			}else{
+				_radio.removeClass('radioActive');
+				isChecked = false;
+			}
+		});
+	};
+});
+</script>
+</body>
+</html>
