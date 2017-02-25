@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>自定义checkbox， radio样式</title>
+<style type="text/css">
+	body{
+		background-color: #fff;
+	}
+	.demo{
+		width: 600px;
+		margin: 0 auto;
+	}
+	input[type="checkbox"]{
+		opacity: 0;
+	}
+	input[type="checkbox"] + label:before{
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		background-image: url(images/99322cf8c3283e42.png);
+		background-position: 75px 67px;
+		content: "";
+		cursor: pointer;
+	}
+	input[type="checkbox"]:checked + label:before{
+		background-position: 40px 68px;
+	}
+
+	input[type="radio"]{
+		opacity: 0;
+	}
+	input[type="radio"] + label:before{
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		background-image: url(images/99322cf8c3283e42.png);
+		background-position: 76px 90px;
+		content: "";
+		cursor: pointer;
+	}
+	input[type="radio"]:checked + label:before{
+		background-position: 41px 90px;
+	}
+	span{
+		padding-left: 10px;
+	}
+</style>
+</head>
+<body>
+<div class="demo">
+	<p><input type="checkbox" name="" id="checkbox" /><label for="checkbox"></label><span>性别</span></p>
+	<p><input type="radio" name="" id="man"><label for="man"></label><span>男</span></p>
+	<p><input type="radio" name="" id="woman"><label for="woman"></label><span>女</span></p>
+</div>
+
+
+
+</body>
+</html>
